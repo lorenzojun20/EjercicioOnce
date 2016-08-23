@@ -102,35 +102,35 @@ public class Ejercicio11 extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 386, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 311, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void cmdCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdCalcularActionPerformed
-        String gine,trauma,pedi;
-        double presup,op1=0,op2=0,op3=0;
-        
-        if(txtAnual.getText().trim().isEmpty()){
-            JOptionPane.showMessageDialog(this, "Digite Presupuesto Anual del Hospital","ERROR",JOptionPane.ERROR_MESSAGE);
-            txtAnual.requestFocusInWindow();            
-        }else{
-            presup=Double.parseDouble(txtAnual.getText());
-            op1=(40*presup)/100;
-            op2=(30*presup)/100;
-            op3=(30*presup)/100;
+        String gine, trauma, pedi;
+        double presup, op1 = 0, op2 = 0, op3 = 0;
+
+        if (txtAnual.getText().trim().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Digite Presupuesto Anual del Hospital", "ERROR", JOptionPane.ERROR_MESSAGE);
+            txtAnual.requestFocusInWindow();
+        } else {
+            presup = Double.parseDouble(txtAnual.getText());
+            op1 = (40 * presup) / 100;
+            op2 = (30 * presup) / 100;
+            op3 = (30 * presup) / 100;
         }
-        gine=String.valueOf(op1);
-        txtGinecologia.setText("$"+gine);
-        trauma=String.valueOf(op2);
-        txtTraumatologia.setText("$"+trauma);
-        pedi=String.valueOf(op3);
-        txtPediatria.setText("$"+pedi);
+        gine = String.valueOf(op1);
+        txtGinecologia.setText("$" + gine);
+        trauma = String.valueOf(op2);
+        txtTraumatologia.setText("$" + trauma);
+        pedi = String.valueOf(op3);
+        txtPediatria.setText("$" + pedi);
     }//GEN-LAST:event_cmdCalcularActionPerformed
 
     private void cmdBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdBorrarActionPerformed
@@ -138,18 +138,18 @@ public class Ejercicio11 extends javax.swing.JFrame {
         txtGinecologia.setText("");
         txtTraumatologia.setText("");
         txtPediatria.setText("");
-        
+
         txtAnual.requestFocusInWindow();
     }//GEN-LAST:event_cmdBorrarActionPerformed
 
     private void txtAnualKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAnualKeyTyped
-         char c=evt.getKeyChar(); 
-             
-         
-          if(!Character.isDigit(c)) { 
-              getToolkit().beep(); 
-               
-              evt.consume(); }
+        char c = evt.getKeyChar();
+
+        if (!Character.isDigit(c)) {
+            getToolkit().beep();
+
+            evt.consume();
+        }
     }//GEN-LAST:event_txtAnualKeyTyped
 
     /**
